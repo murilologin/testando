@@ -1,0 +1,35 @@
+<div fxLayoutAlign="center">
+    
+    <mat-list>
+        <h1>Cadastro de Cliente</h1>
+        <mat-list-item fxLayoutAlign="center">
+            <button mat-raised-button color="accent" matTooltip="Voltar" routerLink="/cliente">
+                <mat-icon class="toolbar-icon">arrow_back</mat-icon>
+                Voltar para listagem
+            </button>
+        </mat-list-item>
+        <mat-list-item>
+            <b>Cliente:</b> {{ cliente.id }}
+        </mat-list-item>
+        <mat-list-item>
+            <b>Nome:</b> {{ cliente.nome }}
+        </mat-list-item>
+        <mat-list-item fxLayoutAlign="center">
+            <b>Fantasia:</b> {{ cliente.fantasia }}
+        </mat-list-item>
+        <mat-list-item fxLayoutAlign="center">
+            <b>Documento:</b> {{ cliente.documento }}
+        </mat-list-item>
+        <mat-list-item fxLayoutAlign="center">
+            <b>Endereço:</b> {{ cliente.endereco }}
+        </mat-list-item>
+        <br>
+        <mat-list-item fxLayoutAlign="center">
+            <button mat-raised-button color="accent" matTooltip="Editar" (click)="editar(cliente.id)">
+                <mat-icon class="toolbar-icon">edit</mat-icon>
+                Alterar
+            </button>
+        </mat-list-item>
+
+    </mat-list>
+</div>

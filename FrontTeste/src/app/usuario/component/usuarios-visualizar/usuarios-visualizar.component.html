@@ -1,0 +1,29 @@
+<div fxLayoutAlign="center">
+    
+    <mat-list>
+        <h1>Cadastro de Usuário</h1>
+        <mat-list-item fxLayoutAlign="center">
+            <button mat-raised-button color="accent" matTooltip="Voltar" routerLink="/usuario">
+                <mat-icon class="toolbar-icon">arrow_back</mat-icon>
+                Voltar para listagem
+            </button>
+        </mat-list-item>
+        <mat-list-item>
+            <b>Usuário:</b> {{ usuario.username }}
+        </mat-list-item>
+        <mat-list-item>
+            <b>Nome:</b> {{ usuario.name }}
+        </mat-list-item>
+        <mat-list-item fxLayoutAlign="center">
+            <b>Email:</b> {{ usuario.email }}
+        </mat-list-item>
+        <br>
+        <mat-list-item fxLayoutAlign="center">
+            <button mat-raised-button color="accent" matTooltip="Editar" (click)="editar(usuario.username)">
+                <mat-icon class="toolbar-icon">edit</mat-icon>
+                Alterar
+            </button>
+        </mat-list-item>
+
+    </mat-list>
+</div>

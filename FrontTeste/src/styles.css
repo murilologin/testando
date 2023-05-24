@@ -1,0 +1,86 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.maozinha {
+    cursor: pointer;
+}
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 80%;
+  }
+  
+  .btn {
+    border: 2px solid black;
+    background-color: white;
+    color: black;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  .default:hover {
+    background: #e7e7e7;
+  }
+
+  .info:hover {
+    background: #2196F3;
+    color: white;
+  }
+
+  
+  .container-full > * {
+    width: 100%;
+  }
+
+  /*@media(min-width:160px) {*/
+    .responsive-col-1 > * {
+      width: 8%;
+    }
+    .responsive-col-2 > * {
+      width: 16%;
+    }
+    .responsive-col-3 > * {
+      width: 24%;
+    }
+    .responsive-col-4 > * {
+      width: 32%;
+    }
+    .responsive-col-5 > * {
+      width: 40%;
+    }
+    .responsive-col-6 > * {
+      width: 48%;
+    }
+    .responsive-col-7 > * {
+      width: 56%;
+    }
+    .responsive-col-8 > * {
+      width: 64%;
+    }
+    .responsive-col-9 > * {
+      width: 72%;
+    }
+    .responsive-col-10 > * {
+      width: 80%;
+    }
+    .responsive-col-11 > * {
+      width: 90%;
+    }
+    .responsive-col-12 > * {
+      width: 100%;
+    }
+  /*}*/
+
+  @media(min-width:950px) {
+    .container-responsive > * {
+      width: 100%;
+    }
+  }

@@ -1,0 +1,38 @@
+<div fxLayoutAlign="center">
+    
+    <mat-list>
+        <h1>Cadastro de Produto</h1>
+        <mat-list-item fxLayoutAlign="center">
+            <button mat-raised-button color="accent" matTooltip="Voltar" routerLink="/produto">
+                <mat-icon class="toolbar-icon">arrow_back</mat-icon>
+                Voltar para listagem
+            </button>
+        </mat-list-item>
+        <mat-list-item>
+            <b>Código:</b> {{ produto.id }}
+        </mat-list-item>
+        <mat-list-item>
+            <b>Descrição:</b> {{ produto.descricao }}
+        </mat-list-item>
+        <mat-list-item fxLayoutAlign="center">
+            <b>Cód.Barras:</b> {{ produto.codigoBarras }}
+        </mat-list-item>
+        <mat-list-item fxLayoutAlign="center">
+            <b>Valor venda:</b> {{ produto.valorVenda | currency }}
+        </mat-list-item>
+        <mat-list-item fxLayoutAlign="center">
+            <b>Peso bruto:</b> {{ produto.pesoBruto | number }}
+        </mat-list-item>
+        <mat-list-item fxLayoutAlign="center">
+            <b>Peso liquido:</b> {{ produto.pesoLiquido | number }}
+        </mat-list-item>
+        <br>
+        <mat-list-item fxLayoutAlign="center">
+            <button mat-raised-button color="accent" matTooltip="Editar" (click)="editar(produto.id)">
+                <mat-icon class="toolbar-icon">edit</mat-icon>
+                Alterar
+            </button>
+        </mat-list-item>
+
+    </mat-list>
+</div>

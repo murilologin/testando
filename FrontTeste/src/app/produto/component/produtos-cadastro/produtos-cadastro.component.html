@@ -1,0 +1,57 @@
+<form [formGroup]="form" fxLayoutAlign="center" novalidate>
+    <div class="container-full">
+        <h2>Cadastro de Produto</h2>
+        <mat-form-field style="width: 35%;">
+            <mat-label>Código</mat-label>
+            <input matInput placeholder="Código" formControlName="id" [readonly]="true">            
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Descrição</mat-label>
+            <input matInput placeholder="Descrição" formControlName="descricao">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Cód.Barras</mat-label>
+            <input matInput placeholder="Cód.Barras" formControlName="codigoBarras">   
+        </mat-form-field>
+        <mat-form-field style="width: 30%;">
+            <mat-label>Valor venda</mat-label>
+            <input matInput currencyMask [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"
+              placeholder="Valor venda" formControlName="valorVenda">
+        </mat-form-field>
+        &nbsp;
+        <mat-form-field style="width: 30%; text-align: right;">
+            <mat-label>Peso bruto</mat-label>
+            <input matInput currencyMask [options]="{ prefix: '', thousands: '.', decimal: ',' }"
+                 placeholder="Peso bruto" formControlName="pesoBruto">
+        </mat-form-field>
+        &nbsp;
+        <mat-form-field style="width: 30%; text-align: right;">
+            <mat-label>Peso liquido</mat-label>
+            <input matInput currencyMask [options]="{ prefix: '', thousands: '.', decimal: ',' }"
+                 placeholder="Peso liquido" formControlName="pesoLiquido">
+        </mat-form-field>
+ 
+        <div>
+            <button mat-raised-button color="accent" [disabled]="form.invalid"
+                    (click)="gravarProduto()" style="width: 30%;">
+                <mat-icon class="toolbar-icon">save</mat-icon>
+                Salvar
+            </button> 
+            &nbsp;        
+            <button mat-raised-button color="accent" [disabled]="form.invalid"
+                    (click)="excluirDialog()" style="width: 30%;">
+                <mat-icon class="toolbar-icon">delete</mat-icon>
+                Excluir
+            </button> 
+            &nbsp;        
+            <button mat-raised-button color="accent" routerLink="/produto" style="width: 30%;">
+                <mat-icon class="toolbar-icon">arrow_back</mat-icon>
+                Voltar
+            </button>
+        </div>
+ 
+    </div>
+ 
+</form>
+
