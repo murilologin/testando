@@ -1,0 +1,44 @@
+Sistema funcionando na AWS:
+http://ec2-3-94-165-5.compute-1.amazonaws.com
+(usuário: admin, senha: 123)
+
+
+Código fonte:
+- ApiTeste (Backend feito em java 11 com spring boot)
+- FrontTeste (Feito em angular)
+
+Arquivos para produção:
+- frontend: https://drive.google.com/file/d/1DtNNuINnv4JBRqU3sNFGbocTntVifvBZ/view?usp=sharing
+- backend: https://drive.google.com/file/d/1CSMMxDz1QdDwWi9G8LsEItE1GP20fcXw/view?usp=sharing
+
+Para executar:
+-Java 11 instalado.
+-Servidor WEB, NgInx(mais fácil, só copiar o frontend para pasta html), Tomcat, IIS...
+-Executar o backend java -jar ApiTeste-0.0.1-SNAPSHOT.jar
+
+Portas:
+-PostgreSQL: 5432
+-Backend: 8082
+
+
+-Banco de dados PostgreSQL 15 (na porta padrão 5432)
+-user: postgres
+-password: postgres
+
+-Criar database:
+CREATE DATABASE softlinedb
+    WITH
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'Portuguese_Brazil.1252'
+    LC_CTYPE = 'Portuguese_Brazil.1252'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = -1
+    IS_TEMPLATE = False;
+
+-Fazer o restore do banco com o arquivo (banco.backup)
+
+
+
+
+
